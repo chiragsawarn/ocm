@@ -1,0 +1,11 @@
+:root{
+    --black-0:#000;
+    --black-1:#111;
+    --logo-yellow:#df7d1b;
+    color:whitesmoke;
+}
+
+.link:hover{
+    color: var(--logo-yellow);
+    cursor: pointer;
+}
