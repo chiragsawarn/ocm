@@ -2,6 +2,7 @@ const express = require('express')
 const { request } = require('https')
 const router = express.Router()
 const ProviderAuth = require('../models/auth/providerAuth')
+const Provider = require('../models/provider')
 
 // Get all
 router.get('/', async (req,res)=>{
@@ -23,10 +24,15 @@ router.get('/:id', getUser, (req,res)=>{
 
 // Create one
 router.post('/',async (req,res)=>{
-    const user = new Task({
+    const p = new Provider({
+        name:req.body.name
+    })
+    const user = new ProviderAuth({
         userId:req.body.userId,
         password:req.body.password,
+        provider:p._id,
     })
+    console.log(user._id);
     try{
         const newUser = await user.save()
         res.status(201).json(newUser)

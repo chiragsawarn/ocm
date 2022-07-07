@@ -7,13 +7,13 @@ const patientAuthSchema = new mongoose.Schema({
         required:true
     },
     password:{
-        type:Number,
+        type:String,
         required:true
     },
     patient:{
         type:mongoose.Schema.Types.ObjectId,
         ref:patientSchema,
-        required:true,
+        required:false,
     },
 })
 

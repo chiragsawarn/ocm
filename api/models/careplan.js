@@ -1,21 +1,21 @@
 const mongoose = require('mongoose')
-const patientSchema = require('./patient')
+const diseaseSchema = require('./disease')
 
 const careplanSchema = new mongoose.Schema({
-    patient:{
+    disease:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:patientSchema,
+        ref:diseaseSchema,
         required:true,
     },
-    frequency:{
+    desiredOutcome:{
         type:String,
         required:true
     },
-    startTime:{
+    nursingIntervention:{
         type:String,
         required:true,
     },
-    endTime:{
+    thrapeuticIntervention:{
         type:String,
         required:true,
     },

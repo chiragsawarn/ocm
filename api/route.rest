@@ -1,4 +1,10 @@
 GET http://localhost:3000/providerAuth
+Content-Type: application/json
+
+{
+    "userId":"Provider3",
+    "password":"password"
+}
 
 ###
 
@@ -6,20 +12,20 @@ POST http://localhost:3000/providerAuth
 Content-Type: application/json
 
 {
-    "userId":"URA1956",
-    "password":"password",
+    "userId":"Provider4",
+    "password":"password"
 }
 
 ###
-GET http://localhost:3000/tasks/62b435b5df1bb92b758e2d0e
+GET http://localhost:3000/providerAuth/62c46c0aab70a8909d300391
 
 ###
-DELETE http://localhost:3000/tasks/62b435b5df1bb92b758e2d0e
+DELETE http://localhost:3000/providerAuth/62c46c0aab70a8909d300391
 
 ###
-PATCH http://localhost:3000/tasks/62b435b5df1bb92b758e2d0e
+PATCH http://localhost:3000/providerAuth/62c46c0aab70a8909d300391
 Content-Type: application/json
 
 {
-    "name":"Buy popcorn"
+    "userId":"Buy popcorn"
 }
