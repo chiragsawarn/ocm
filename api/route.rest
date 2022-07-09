@@ -1,29 +1,29 @@
-GET http://localhost:3000/providerAuth
+POST http://localhost:3000/patientAuth/login
 Content-Type: application/json
 
 {
-    "userId":"Provider3",
+    "userId":"Patient1",
     "password":"password"
 }
 
 ###
 
-POST http://localhost:3000/providerAuth
+POST http://localhost:3000/patientAuth/signup
 Content-Type: application/json
 
 {
-    "userId":"Provider4",
+    "userId":"Patient5",
     "password":"password"
 }
 
 ###
-GET http://localhost:3000/providerAuth/62c46c0aab70a8909d300391
+GET http://localhost:3000/patientAuth/62c85da68138c4c33add61d0
 
 ###
-DELETE http://localhost:3000/providerAuth/62c46c0aab70a8909d300391
+DELETE http://localhost:3000/patientAuth/62c85da68138c4c33add61d0
 
 ###
-PATCH http://localhost:3000/providerAuth/62c46c0aab70a8909d300391
+PATCH http://localhost:3000/patientAuth/62c85da68138c4c33add61d0
 Content-Type: application/json
 
 {

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
-// import { ApiService } from '../services/api.service';
+import { ApiService } from 'src/app/services/api.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -9,11 +10,12 @@ import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 })
 
 export class LoginComponent implements OnInit {
+  loginFailed:Boolean = false;
   loginForm:FormGroup;
   userIdLabel:string = "User ID";
 
-  constructor(private fb:FormBuilder) { }
-  // constructor(private fb:FormBuilder, private api:ApiService) { }
+  // constructor(private fb:FormBuilder) { }
+  constructor(private fb:FormBuilder, private api:ApiService, private router:Router) { }
 
   ngOnInit(): void {
     this.loginForm = this.fb.group({
@@ -32,11 +34,21 @@ export class LoginComponent implements OnInit {
   }
 
   login(){
-    console.log(this.loginForm.value);
-    // this.api.saveTask(this.loginForm.value).subscribe((res)=>{
-    //   alert(JSON.stringify(res));
-    //   console.log(res);
-    // })
+    function loginSuccessful(res){
+      return Array.isArray(res) && res.length;
+    }
+    if(this.loginForm.value.type == 'patient'){
+      this.loginForm.removeControl('type');
+      console.log(this.loginForm.value);
+      this.api.patientAuth(this.loginForm.value).subscribe((res)=>{
+        if(!loginSuccessful(res)){
+          this.loginFailed = true;
+        }
+
+      });
+    }else if(this.loginForm.value.type == 'provider'){
+
+    }
   }
 
 }

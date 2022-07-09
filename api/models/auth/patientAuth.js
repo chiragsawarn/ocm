@@ -4,7 +4,8 @@ const patientSchema = require('../patient')
 const patientAuthSchema = new mongoose.Schema({
     userId:{
         type: String,
-        required:true
+        required:true,
+        unique:true,
     },
     password:{
         type:String,

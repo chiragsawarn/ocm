@@ -13,8 +13,9 @@ db.on('error', (error) => console.log(error))
 db.once('open', () => console.log('Connected to Database'))
 app.use(express.json())
 
-// const patientAuthRouter = require('./routes/patientAuth')
-// app.use('/patientAuth', patientAuthRouter)
+const patientAuthRouter = require('./routes/patientAuth')
+app.use('/patientAuth', patientAuthRouter)
+
 const providerAuthRouter = require('./routes/providerAuth')
 app.use('/providerAuth', providerAuthRouter)
 

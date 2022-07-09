@@ -17,11 +17,11 @@ const encounterSchema = new mongoose.Schema({
         enum:['inpatient','outpatient','ambulatory','wellness'],
         default:'outpatient',
     },
-    patient:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:patientSchema,
-        required:true,
-    },
+    // patient:{
+    //     type:mongoose.Schema.Types.ObjectId,
+    //     ref:patientSchema,
+    //     required:true,
+    // },
     provider:{
         type:mongoose.Schema.Types.ObjectId,
         ref:providerSchema,

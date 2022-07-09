@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const insuranceSchema = require('./insurance')
+const encounterSchema = require('./encounter')
 
 const patientSchema = new mongoose.Schema({
     name:{

@@ -15,11 +15,11 @@ const diseaseSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    careplan:{
-        type:mongoose.Schema.Types.ObjectId,
-        ref:careplanSchema,
-        required:false,
-    },
+    // careplan:{
+    //     type:mongoose.Schema.Types.ObjectId,
+    //     ref:careplanSchema,
+    //     required:false,
+    // },
 })
 
 module.exports = mongoose.model('disease',diseaseSchema);

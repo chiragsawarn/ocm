@@ -1,7 +1,7 @@
 <h2 class="text-center mt-4 mb-5">Login</h2>
 <div class="d-flex justify-content-center">
     <div class="col-md-4">
-        <form class="row g-3" [formGroup]="loginForm" (ngSubmit)="login()">
+        <form class="row g-3" [formGroup]="loginForm" (ngSubmit)="login()" (change)="loginFailed = false">
             
             <div class="col-md-12">
                 <label for="type" class="form-label">Type</label>
@@ -18,7 +18,7 @@
 
             <div class="col-md-12">
                 <label for="userId" class="form-label">{{userIdLabel}}</label>
-                <input type="text" formControlName="name" class="form-control" id="userId" name="userId" required>
+                <input type="text" formControlName="userId" class="form-control" id="userId" name="userId" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -26,7 +26,7 @@
             
             <div class="col-md-12">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" formControlName="name" class="form-control" id="password" name="password" required>
+                <input type="password" formControlName="password" class="form-control" id="password" name="password" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -38,8 +38,9 @@
                 <button class="btn btn-dark" type="submit">Login</button>
             </div>
 
-            {{loginForm.value | json}}
+            <!-- {{loginForm.value | json}} -->
 
         </form>
+        <p *ngIf="loginFailed" class="text-center text-danger">Incorrect User ID or Password!</p>
     </div>
 </div>
