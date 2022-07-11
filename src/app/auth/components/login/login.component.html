@@ -1,46 +1,51 @@
-<h2 class="text-center mt-4 mb-5">Login</h2>
-<div class="d-flex justify-content-center">
-    <div class="col-md-4">
-        <form class="row g-3" [formGroup]="loginForm" (ngSubmit)="login()" (change)="loginFailed = false">
-            
-            <div class="col-md-12">
-                <label for="type" class="form-label">Type</label>
-                <select formControlName="type" (change)="changeUserIdLabel()" class="form-select" id="type" name="type" required>
-                    <option selected disabled value="">User Type</option>
-                    <option value="employee">Employee</option>
-                    <option value="provider">Provider</option>
-                    <option value="patient">Patient</option>
-                </select>
-                <div class="invalid-feedback">
-                    Please select a valid type.
+<section style="position:relative; bottom:10%;">
+    <h1 class="text-center mb-4">Login</h1>
+    <div class="d-flex justify-content-center">
+        <div class="col-md-4">
+            <form class="row g-3" [formGroup]="loginForm" (ngSubmit)="login()" (change)="loginFailed = false">
+
+                <div class="col-md-12">
+                    <label for="type" class="form-label">Type</label>
+                    <select formControlName="type" (change)="changeUserIdLabel()" class="form-select" id="type"
+                        name="type" [(ngModel)]="userType" required>
+                        <option selected disabled value="">User Type</option>
+                        <option value="employee">Employee</option>
+                        <option value="provider">Provider</option>
+                        <option value="patient">Patient</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Please select a valid type.
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-md-12">
-                <label for="userId" class="form-label">{{userIdLabel}}</label>
-                <input type="text" formControlName="userId" class="form-control" id="userId" name="userId" required>
-                <div class="valid-feedback">
-                    Looks good!
+                <div class="col-md-12">
+                    <label for="userId" class="form-label">{{userIdLabel}}</label>
+                    <input type="text" formControlName="userId" class="form-control" id="userId" name="userId" required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
                 </div>
-            </div>
-            
-            <div class="col-md-12">
-                <label for="password" class="form-label">Password</label>
-                <input type="password" formControlName="password" class="form-control" id="password" name="password" required>
-                <div class="valid-feedback">
-                    Looks good!
+
+                <div class="col-md-12">
+                    <label for="password" class="form-label">Password</label>
+                    <input type="password" formControlName="password" class="form-control" id="password" name="password"
+                        required>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
                 </div>
-            </div>
 
-            
 
-            <div class="col-3 mt-3">
-                <button class="btn btn-dark" type="submit">Login</button>
-            </div>
 
-            <!-- {{loginForm.value | json}} -->
+                <div class="col-3 mt-3">
+                    <button class="btn btn-dark" type="submit">Login</button>
+                </div>
 
-        </form>
-        <p *ngIf="loginFailed" class="text-center text-danger">Incorrect User ID or Password!</p>
+                <!-- {{loginForm.value | json}} -->
+
+            </form>
+            <p *ngIf="loginFailed" class="text-center text-danger">Incorrect User ID or Password!</p>
+        </div>
     </div>
-</div>
+
+</section>

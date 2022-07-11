@@ -6,11 +6,14 @@ import { AppComponent } from './app.component';
 import { AuthModule } from './auth/auth.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MaterialModule } from './shared/modules/material/material.module';
+import { LoginSwitchComponent } from './login-switch/login-switch.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginSwitchComponent
   ],
   imports: [
     BrowserModule,
@@ -18,7 +21,9 @@ import { HttpClientModule } from '@angular/common/http';
     AuthModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
   exports:[
     FormsModule,

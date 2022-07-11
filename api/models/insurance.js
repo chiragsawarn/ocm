@@ -1,5 +1,6 @@
 const mongoose = require('mongoose')
 const providerSchema = require('./provider')
+const patientSchema = require('./patient')
 
 
 const insuranceSchema = new mongoose.Schema({
@@ -18,6 +19,11 @@ const insuranceSchema = new mongoose.Schema({
     pcp:{
         type:mongoose.Schema.Types.ObjectId,
         ref:providerSchema,
+        required:false,
+    },
+    network:{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:networkSchema,
         required:false,
     },
     coveredMemebers:{

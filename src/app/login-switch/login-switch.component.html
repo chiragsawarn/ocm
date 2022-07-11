@@ -1,0 +1,14 @@
+<section class="d-flex justify-content-around">
+    <div class="d-flex flex-column align-items-center">
+        <div class="material-icons mb-2" style="font-size:100px;">badge</div>
+        <a routerLink="/auth/login/{{type[0]}}" class="btn btn-warning">Login as Employee</a>
+    </div>
+    <div class="d-flex flex-column align-items-center">
+        <div class="material-icons mb-2" style="font-size:100px;">sentiment_very_satisfied</div>
+        <a routerLink="/auth/login/{{type[1]}}" class="btn btn-warning">Login as Patient</a>
+    </div>
+    <div class="d-flex flex-column align-items-center">
+        <div class="material-icons mb-2" style="font-size:100px;">vaccines</div>
+        <a routerLink="/auth/login/{{type[2]}}" class="btn btn-warning">Login as Provider</a>
+    </div>
+</section>
