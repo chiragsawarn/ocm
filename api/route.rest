@@ -1,8 +1,9 @@
+
 POST http://localhost:3000/patientAuth/login
 Content-Type: application/json
 
 {
-    "userId":"Patient1",
+    "userId":"jemimah.vidal",
     "password":"password"
 }
 
@@ -12,20 +13,22 @@ POST http://localhost:3000/patientAuth/signup
 Content-Type: application/json
 
 {
-    "userId":"Patient5",
-    "password":"password"
+    "userId":"jemimah.vidal",
+    "password":"password",
+    "patient":"62ce5a06622650592486469d"
+
 }
 
 ###
-GET http://localhost:3000/patientAuth/62c85da68138c4c33add61d0
+GET http://localhost:3000/patientAuth/62ce629d62265059248646ad
 
 ###
-DELETE http://localhost:3000/patientAuth/62c85da68138c4c33add61d0
+DELETE http://localhost:3000/patientAuth/62ce629d62265059248646ad
 
 ###
-PATCH http://localhost:3000/patientAuth/62c85da68138c4c33add61d0
+PATCH http://localhost:3000/patientAuth/62ce629d62265059248646ad
 Content-Type: application/json
 
 {
-    "userId":"Buy popcorn"
+    "userId":"Jon Snow"
 }

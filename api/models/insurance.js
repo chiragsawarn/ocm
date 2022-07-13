@@ -1,6 +1,6 @@
 const mongoose = require('mongoose')
 const providerSchema = require('./provider')
-const patientSchema = require('./patient')
+const networkSchema = require('./network')
 
 
 const insuranceSchema = new mongoose.Schema({
@@ -27,11 +27,11 @@ const insuranceSchema = new mongoose.Schema({
         required:false,
     },
     coveredMemebers:{
-        type:Array,
+        type:String,
         required:true,
     },
     maximum:{
-        type:String,
+        type:Number,
         required:true,
     },
     deductible:{

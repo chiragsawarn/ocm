@@ -19,4 +19,10 @@ app.use('/patientAuth', patientAuthRouter)
 const providerAuthRouter = require('./routes/providerAuth')
 app.use('/providerAuth', providerAuthRouter)
 
+const networkRouter = require('./routes/network')
+app.use('/network', networkRouter)
+
+const patientRouter = require('./routes/patient')
+app.use('/patient', patientRouter)
+
 app.listen(3000, () => console.log('Server Started!'));
