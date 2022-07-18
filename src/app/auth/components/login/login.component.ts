@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {FormGroup, FormBuilder, Validators} from '@angular/forms';
+import {FormGroup, FormBuilder, Validators, FormControl} from '@angular/forms';
 import { ApiService } from 'src/app/services/api.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -15,8 +15,7 @@ export class LoginComponent implements OnInit {
   userIdLabel:string = "User ID";
   userType:string;
 
-  // constructor(private fb:FormBuilder) { }
-  constructor(private fb:FormBuilder, private api:ApiService, private route:ActivatedRoute) { }
+  constructor(private fb:FormBuilder, private api:ApiService, private route:ActivatedRoute, private router:Router) { }
 
   ngOnInit(): void {
     
@@ -26,12 +25,11 @@ export class LoginComponent implements OnInit {
       password:['',[Validators.required]],
       
     })
-
+  
     this.route.params.subscribe((param) =>{
       this.userType = param.type;
       this.loginForm.value.type = param.type;
       this.changeUserIdLabel();
-      // this.userIdLabel = param.type;
     })
   }
 
@@ -44,7 +42,7 @@ export class LoginComponent implements OnInit {
 
   login(){
     function loginSuccessful(res){
-      return Array.isArray(res) && res.length;
+      return res != null;
     }
     if(this.loginForm.value.type == 'patient'){
       this.loginForm.removeControl('type');
@@ -52,12 +50,18 @@ export class LoginComponent implements OnInit {
       this.api.patientAuth(this.loginForm.value).subscribe((res)=>{
         if(!loginSuccessful(res)){
           this.loginFailed = true;
+          localStorage.clear();
         }
-
+        else{
+          alert(JSON.stringify(res['patient'],null,4));
+          localStorage.setItem('patientData',JSON.stringify(res['patient']));
+          this.router.navigate(['/patient/booking/pcp']);
+        }
       });
+      this.loginForm.addControl('type', new FormControl('patient', Validators.required));
     }else if(this.loginForm.value.type == 'provider'){
-
+      
+      this.loginForm.addControl('type', new FormControl('provider', Validators.required));
     }
   }
-
 }

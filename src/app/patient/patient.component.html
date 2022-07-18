@@ -1,1 +1,8 @@
-<p>patient works!</p>
+<div class="container d-flex justify-content-end" style="position: absolute; top:6%;">
+    <section id="links" class="text-light">
+        <h3 class="d-inline-block me-4 link" routerLink="booking/pcp" (click)="makeAppointment = true" [ngClass]="{active:makeAppointment}">Make Appointment</h3>
+        <h3 class="d-inline-block me-4 link" routerLink="view-bookings" (click)="makeAppointment = false" [ngClass]="{active:!makeAppointment}">View Appointment</h3>
+        <h3 class="d-inline-block link" routerLink="/">Logout</h3>
+    </section>
+</div>
+<router-outlet></router-outlet>

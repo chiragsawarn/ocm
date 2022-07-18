@@ -1,27 +1,27 @@
 const mongoose = require('mongoose')
 
 const organizationSchema = new mongoose.Schema({
-    name:{
+    NAME:{
         type: String,
         required:true
     },
-    address:{
+    ADDRESS:{
         type: String,
         required:true
     },
-    city:{
+    CITY:{
         type: String,
         required:true
     },
-    state:{
+    STATE:{
         type: String,
         required:true
     },
-    phone:{
+    PHONE:{
         type: String,
         required:true
     },
-    revenue:{
+    REVENUE:{
         type: Number,
         required:true
     },

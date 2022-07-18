@@ -1,8 +1,79 @@
+
+POST http://localhost:3000/encounter/ofProvider
+Content-Type: application/json
+
+{
+    "PROVIDER":"62cd0ce286b0448a549eacd1"
+}
+
+###
+
+POST http://localhost:3000/encounter/add
+Content-Type: application/json
+
+{
+    "START":"2022-08-24T16:00:00.000Z",
+    "END":"2022-08-24T16:15:00.000Z",
+    "PROVIDER":"62cd0ce286b0448a549eacd1",
+    "PATIENT":"62ce599e6226505924864696"
+
+}
+
+###
+GET http://localhost:3000/encounter/62ce629d62265059248646ad
+
+###
+DELETE http://localhost:3000/encounter/62ce629d62265059248646ad
+
+###
+PATCH http://localhost:3000/encounter/62ce629d62265059248646ad
+Content-Type: application/json
+
+{
+    "userId":"Jon Snow"
+}
+
+### TO TEST : PROVIDER AUTH
+
+GET http://localhost:3000/providerAuth
+Content-Type: application/json
+
+{
+    "userId":"Provider3",
+    "password":"password"
+}
+
+###
+
+POST http://localhost:3000/providerAuth
+Content-Type: application/json
+
+{
+    "userId":"Provider4",
+    "password":"password"
+}
+
+###
+GET http://localhost:3000/providerAuth/62c46c0aab70a8909d300391
+
+###
+DELETE http://localhost:3000/providerAuth/62c46c0aab70a8909d300391
+
+###
+PATCH http://localhost:3000/providerAuth/62c46c0aab70a8909d300391
+Content-Type: application/json
+
+{
+    "userId":"Buy popcorn"
+}
+
+### TO TEST : PATIENT AUTH
+
 POST http://localhost:3000/patientAuth/login
 Content-Type: application/json
 
 {
-    "userId":"Patient1",
+    "userId":"chirag.sawarn",
     "password":"password"
 }
 
@@ -17,15 +88,75 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:3000/patientAuth/62c85da68138c4c33add61d0
+GET http://localhost:3000/patientAuth/62ce626f62265059248646a7
 
 ###
-DELETE http://localhost:3000/patientAuth/62c85da68138c4c33add61d0
+DELETE http://localhost:3000/patientAuth/62d15b32c2ecf143a5c6967d
 
 ###
-PATCH http://localhost:3000/patientAuth/62c85da68138c4c33add61d0
+PATCH http://localhost:3000/patientAuth/62ce626f62265059248646a7
 Content-Type: application/json
 
 {
-    "userId":"Buy popcorn"
+    "userId":"chirag.sawarn"
+}
+
+### TO TEST : Networks
+
+GET http://localhost:3000/network/
+
+###
+
+POST http://localhost:3000/network/
+Content-Type: application/json
+
+{
+    "PROVIDERS":["62cd0ce286b0448a549eab9d","62cd0ce286b0448a549eace6","62cd0ce286b0448a549eabd4","62cd0ce286b0448a549eac09","62cd0ce286b0448a549ead2b","62cd0ce286b0448a549eac46","62cd0ce286b0448a549eacd4","62cd0ce286b0448a549eabcd","62cd0ce286b0448a549ead4f","62cd0ce286b0448a549eab5e","62cd0ce286b0448a549ead1e","62cd0ce286b0448a549eacf6","62cd0ce286b0448a549eabe5","62cd0ce286b0448a549ead8a","62cd0ce286b0448a549eac90","62cd0ce286b0448a549eabf5","62cd0ce286b0448a549eab8b","62cd0ce286b0448a549eab71","62cd0ce286b0448a549ead3e","62cd0ce286b0448a549eacbe","62cd0ce286b0448a549eac05","62cd0ce286b0448a549eacd6","62cd0ce286b0448a549ead3d","62cd0ce286b0448a549eacec","62cd0ce286b0448a549eacb4","62cd0ce286b0448a549eabcf","62cd0ce286b0448a549eabf7","62cd0ce286b0448a549eaba2","62cd0ce286b0448a549eab8c","62cd0ce286b0448a549eaba7","62cd0ce286b0448a549ead5f","62cd0ce286b0448a549ead08","62cd0ce286b0448a549eacb9","62cd0ce286b0448a549ead85","62cd0ce286b0448a549eac89","62cd0ce286b0448a549eacf4","62cd0ce286b0448a549eac30","62cd0ce286b0448a549eabc6","62cd0ce286b0448a549eaccf","62cd0ce286b0448a549eac3b","62cd0ce286b0448a549eacd0","62cd0ce286b0448a549eacd8","62cd0ce286b0448a549eac3f","62cd0ce286b0448a549ead3c","62cd0ce286b0448a549eac22","62cd0ce286b0448a549ead52","62cd0ce286b0448a549eac83","62cd0ce286b0448a549eacad","62cd0ce286b0448a549eac0b","62cd0ce286b0448a549eab73","62cd0ce286b0448a549ead8c","62cd0ce286b0448a549ead3b","62cd0ce286b0448a549ead88","62cd0ce286b0448a549eac5b","62cd0ce286b0448a549eab9e","62cd0ce286b0448a549eacef","62cd0ce286b0448a549eac80","62cd0ce286b0448a549eac64","62cd0ce286b0448a549eac58","62cd0ce286b0448a549eabbd","62cd0ce286b0448a549eaba9","62cd0ce286b0448a549ead40","62cd0ce286b0448a549eac24","62cd0ce286b0448a549ead2a","62cd0ce286b0448a549eacc9","62cd0ce286b0448a549ead27","62cd0ce286b0448a549eace4","62cd0ce286b0448a549eac87","62cd0ce286b0448a549eac6d","62cd0ce286b0448a549eabe6","62cd0ce286b0448a549eac6f","62cd0ce286b0448a549ead2c","62cd0ce286b0448a549eacab","62cd0ce286b0448a549ead7d","62cd0ce286b0448a549eace3","62cd0ce286b0448a549eab7b","62cd0ce286b0448a549eacb5","62cd0ce286b0448a549ead11","62cd0ce286b0448a549eacd1","62cd0ce286b0448a549eaba4","62cd0ce286b0448a549eac1e","62cd0ce286b0448a549eab6e","62cd0ce286b0448a549ead0f","62cd0ce286b0448a549ead33","62cd0ce286b0448a549eac92","62cd0ce286b0448a549ead1c","62cd0ce286b0448a549eaca0","62cd0ce286b0448a549eac1b","62cd0ce286b0448a549ead57","62cd0ce286b0448a549eabb9","62cd0ce286b0448a549eac8a","62cd0ce286b0448a549eac66","62cd0ce286b0448a549eac3d","62cd0ce286b0448a549eacf1","62cd0ce286b0448a549eabdc","62cd0ce286b0448a549ead6a","62cd0ce286b0448a549eac7e","62cd0ce286b0448a549eabd3","62cd0ce286b0448a549eac9e","62cd0ce286b0448a549eace1","62cd0ce286b0448a549ead05","62cd0ce286b0448a549eac01","62cd0ce286b0448a549ead35","62cd0ce286b0448a549eac97","62cd0ce286b0448a549ead58","62cd0ce286b0448a549eab85","62cd0ce286b0448a549ead60","62cd0ce286b0448a549eaceb","62cd0ce286b0448a549eac65","62cd0ce286b0448a549eabb0","62cd0ce286b0448a549eac2b","62cd0ce286b0448a549ead49","62cd0ce286b0448a549eac07","62cd0ce286b0448a549ead54","62cd0ce286b0448a549eabb6","62cd0ce286b0448a549eab96","62cd0ce286b0448a549eac7a","62cd0ce286b0448a549ead81","62cd0ce286b0448a549eacc0","62cd0ce286b0448a549eab94","62cd0ce286b0448a549ead39","62cd0ce286b0448a549eab63","62cd0ce286b0448a549ead83","62cd0ce286b0448a549eabf0","62cd0ce286b0448a549eac81","62cd0ce286b0448a549eac51","62cd0ce286b0448a549eab77","62cd0ce286b0448a549ead37","62cd0ce286b0448a549ead21","62cd0ce286b0448a549ead19","62cd0ce286b0448a549eab95","62cd0ce286b0448a549eac95","62cd0ce286b0448a549eabda","62cd0ce286b0448a549eac9a","62cd0ce286b0448a549ead7c","62cd0ce286b0448a549eaccd","62cd0ce286b0448a549eab89","62cd0ce286b0448a549eac49","62cd0ce286b0448a549eacc6","62cd0ce286b0448a549ead78","62cd0ce286b0448a549ead0e","62cd0ce286b0448a549eacbd","62cd0ce286b0448a549eaba8","62cd0ce286b0448a549eac40","62cd0ce286b0448a549ead62","62cd0ce286b0448a549eac03","62cd0ce286b0448a549eac9b","62cd0ce286b0448a549eabec","62cd0ce286b0448a549eabe3","62cd0ce286b0448a549ead4b","62cd0ce286b0448a549ead17","62cd0ce286b0448a549eacf8"]
+}
+
+###
+GET http://localhost:3000/network/62cdf77b492375d373b49cee
+
+###
+DELETE http://localhost:3000/network/62cdf77b492375d373b49cee
+
+###
+PATCH http://localhost:3000/network/62cdf77b492375d373b49cee
+Content-Type: application/json
+
+{
+    "PROVIDERS":["ce286b0448a549ead66","62cd0ce286b0448a549eac6e","62cd0ce286b0448a549ead49"]
+}
+
+### TO TEST : PATIENTS
+
+GET http://localhost:3000/patient/
+
+###
+
+POST http://localhost:3000/patient/
+Content-Type: application/json
+
+{
+    "NAME":"Jemimah Vidal",
+    "AGE":28,
+    "INSURANCE":"62ce47b7304c68019031ab3e",
+    "ENCOUNTERS":[]
+}
+
+###
+GET http://localhost:3000/patient/62ce599e6226505924864696/encounters
+
+###
+GET http://localhost:3000/patient/62ce599e6226505924864696
+
+###
+DELETE http://localhost:3000/patient/62ce5a06622650592486469d
+
+###
+PATCH http://localhost:3000/patient/62ce599e6226505924864696
+Content-Type: application/json
+
+{
+    "ENCOUNTERS":[]
 }

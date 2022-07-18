@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ChooseNetworkComponent } from './choose-network.component';
+import { PcpComponent } from './pcp.component';
 
-describe('ChooseNetworkComponent', () => {
-  let component: ChooseNetworkComponent;
-  let fixture: ComponentFixture<ChooseNetworkComponent>;
+describe('PcpComponent', () => {
+  let component: PcpComponent;
+  let fixture: ComponentFixture<PcpComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ChooseNetworkComponent ]
+      declarations: [ PcpComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ChooseNetworkComponent);
+    fixture = TestBed.createComponent(PcpComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

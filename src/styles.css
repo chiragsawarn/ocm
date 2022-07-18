@@ -12,6 +12,10 @@
     cursor: pointer;
 }
 
+h3.active{
+    color: var(--logo-yellow);
+}
+
 body{
     background-color: var(--black-1);
 }

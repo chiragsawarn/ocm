@@ -3,20 +3,20 @@ const insuranceSchema = require('./insurance')
 const encounterSchema = require('./encounter')
 
 const patientSchema = new mongoose.Schema({
-    name:{
+    NAME:{
         type: String,
         required:true
     },
-    age:{
+    AGE:{
         type:Number,
         required:true
     },
-    insurance:{
+    INSURANCE:{
         type:mongoose.Schema.Types.ObjectId,
         ref:insuranceSchema,
         required:false,
     },
-    encounters:[{
+    ENCOUNTERS:[{
         type:mongoose.Schema.Types.ObjectId,
         ref:encounterSchema,
         required:false,

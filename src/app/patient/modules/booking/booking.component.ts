@@ -11,5 +11,6 @@ export class BookingComponent implements OnInit {
 
   ngOnInit(): void {
   }
+  pcp = true;
 
 }

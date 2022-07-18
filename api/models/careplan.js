@@ -2,20 +2,20 @@ const mongoose = require('mongoose')
 const diseaseSchema = require('./disease')
 
 const careplanSchema = new mongoose.Schema({
-    disease:{
+    DISEASE:{
         type:mongoose.Schema.Types.ObjectId,
         ref:diseaseSchema,
         required:true,
     },
-    desiredOutcome:{
+    DESIREDOUTCOME:{
         type:String,
         required:true
     },
-    nursingIntervention:{
+    NURSINGINTERVENTION:{
         type:String,
         required:true,
     },
-    thrapeuticIntervention:{
+    THERAPEUTICINTERVENTION:{
         type:String,
         required:true,
     },
