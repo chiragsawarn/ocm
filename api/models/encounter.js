@@ -1,41 +1,35 @@
 const mongoose = require('mongoose')
-const patientSchema = require('./patient')
 const providerSchema = require('./provider')
 const careplanSchema = require('./careplan')
 
 const encounterSchema = new mongoose.Schema({
-    start:{
+    START:{
         type: Date,
         default:Date(),
     },
-    end:{
+    END:{
         type: Date,
         required:false
     },
-    class:{
+    CLASS:{
         type: String,
         enum:['inpatient','outpatient','ambulatory','wellness'],
         default:'outpatient',
     },
-    // patient:{
-    //     type:mongoose.Schema.Types.ObjectId,
-    //     ref:patientSchema,
-    //     required:true,
-    // },
-    provider:{
+    PROVIDER:{
         type:mongoose.Schema.Types.ObjectId,
         ref:providerSchema,
         required:true,
     },
-    description:{
+    DESCRIPTION:{
         type:String,
-        required:true
+        required:false
     },
-    reason:{
+    REASON:{
         type:String,
-        required:true
+        required:false
     },
-    careplan:{
+    CAREPLAN:{
         type:mongoose.Schema.Types.ObjectId,
         ref:careplanSchema,
         required:false,

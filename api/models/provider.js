@@ -2,20 +2,20 @@ const mongoose = require('mongoose')
 const organizationSchema = require('./organization')
 
 const providerSchema = new mongoose.Schema({
-    name:{
+    NAME:{
         type: String,
         required:true
     },
-    speciality:{
+    SPECIALITY:{
         type: String,
         required:true
     },
-    organization:{
+    ORGANIZATION:{
         type:mongoose.Schema.Types.ObjectId,
         ref:organizationSchema,
         required:true,
     },
-    gender:{
+    GENDER:{
         type: String,
         required:true
     },

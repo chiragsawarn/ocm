@@ -9,6 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/modules/material/material.module';
 import { LoginSwitchComponent } from './login-switch/login-switch.component';
+import { PatientModule } from './patient/patient.module';
 
 @NgModule({
   declarations: [
@@ -19,6 +20,7 @@ import { LoginSwitchComponent } from './login-switch/login-switch.component';
     BrowserModule,
     AppRoutingModule,
     AuthModule,
+    PatientModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,

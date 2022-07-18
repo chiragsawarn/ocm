@@ -1,1 +1,8 @@
-<p>booking works!</p>
+<div class=" d-flex justify-content-center" style="background-color: var(--black-1);">
+    <section id="links" class="text-light mt-3">
+        <h3 class="d-inline-block me-4 link" (click)="pcp = true" routerLink="pcp" [ngClass]="{active:pcp}">PCP</h3>
+        <h3 class="d-inline-block link" (click)="pcp = false" routerLink="in-network" [ngClass]="{active:!pcp}">In Network</h3>
+    </section>
+</div>
+<router-outlet></router-outlet>
+

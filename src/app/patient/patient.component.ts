@@ -12,4 +12,6 @@ export class PatientComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  makeAppointment = true;
+
 }

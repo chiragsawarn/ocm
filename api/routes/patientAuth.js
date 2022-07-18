@@ -7,11 +7,22 @@ const Patient = require('../models/patient')
 // Get all
 router.post('/login', async (req,res)=>{
     try{
-        const user = await PatientAuth.find({
+        const user = await PatientAuth.findOne({
             userId:req.body.userId,
             password:req.body.password
-        }).limit(1)
-        res.json(user)
+        }).populate({
+            path:'patient',
+            populate:[{
+                path:'INSURANCE',
+                populate:[{
+                    path:'PCP',
+                    populate:[{
+                        path:'ORGANIZATION'
+                    }]
+                }]
+            }]
+        })
+        res.json(user);
     }catch(err){
         res.status(500).json({message:err.message})
     }

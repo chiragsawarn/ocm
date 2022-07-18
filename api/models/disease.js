@@ -3,23 +3,18 @@ const careplanSchema = require('./careplan')
 
 
 const diseaseSchema = new mongoose.Schema({
-    symptoms:{
+    SYMPTOMS:{
         type:Array,
         default:[]
     },
-    description:{
+    DESCRIPTION:{
         type:String,
         required:true,
     },
-    reason:{
+    REASON:{
         type:String,
         required:true
-    },
-    // careplan:{
-    //     type:mongoose.Schema.Types.ObjectId,
-    //     ref:careplanSchema,
-    //     required:false,
-    // },
+    }
 })
 
 module.exports = mongoose.model('disease',diseaseSchema);

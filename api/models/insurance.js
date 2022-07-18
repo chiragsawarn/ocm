@@ -4,41 +4,41 @@ const networkSchema = require('./network')
 
 
 const insuranceSchema = new mongoose.Schema({
-    insurer:{
+    INSURER:{
         type: String,
         required:true
     },
-    subscriber:{
+    SUBSCRIBER:{
         type:String,
         required:true
     },
-    stateOfGeographicalValidity:{
+    STATEOFGEOGRAPHICALVALIDITY:{
         type:String,
         required:true,
     },
-    pcp:{
+    PCP:{
         type:mongoose.Schema.Types.ObjectId,
         ref:providerSchema,
         required:false,
     },
-    network:{
+    NETWORK:{
         type:mongoose.Schema.Types.ObjectId,
         ref:networkSchema,
         required:false,
     },
-    coveredMemebers:{
+    COVEREDMEMBERS:{
         type:String,
         required:true,
     },
-    maximum:{
+    MAXIMUM:{
         type:Number,
         required:true,
     },
-    deductible:{
+    DEDUCTIBLE:{
         type:Number,
         required:true,
     },
-    copayment:{
+    COPAYMENT:{
         type:Number,
         required:true,
     },
