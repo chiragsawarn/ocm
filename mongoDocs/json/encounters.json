@@ -1,0 +1,134 @@
+[{
+  "_id": {
+    "$oid": "62d3847e12b13d32bae936ee"
+  },
+  "START": {
+    "$date": {
+      "$numberLong": "1658030400000"
+    }
+  },
+  "END": {
+    "$date": {
+      "$numberLong": "1658031300000"
+    }
+  },
+  "CLASS": "outpatient",
+  "PROVIDER": {
+    "$oid": "62cd0ce286b0448a549eac09"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d38c8a12b13d32bae93704"
+  },
+  "START": {
+    "$date": {
+      "$numberLong": "1658118600000"
+    }
+  },
+  "END": {
+    "$date": {
+      "$numberLong": "1658119500000"
+    }
+  },
+  "CLASS": "outpatient",
+  "PROVIDER": {
+    "$oid": "62cd0ce286b0448a549eac09"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d38e4c12b13d32bae9371b"
+  },
+  "START": {
+    "$date": {
+      "$numberLong": "1658034000000"
+    }
+  },
+  "END": {
+    "$date": {
+      "$numberLong": "1658034900000"
+    }
+  },
+  "CLASS": "outpatient",
+  "PROVIDER": {
+    "$oid": "62cd0ce286b0448a549eac09"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d38e4e12b13d32bae93722"
+  },
+  "START": {
+    "$date": {
+      "$numberLong": "1658034900000"
+    }
+  },
+  "END": {
+    "$date": {
+      "$numberLong": "1658035800000"
+    }
+  },
+  "CLASS": "outpatient",
+  "PROVIDER": {
+    "$oid": "62cd0ce286b0448a549eac09"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d38e5a12b13d32bae93729"
+  },
+  "START": {
+    "$date": {
+      "$numberLong": "1658035800000"
+    }
+  },
+  "END": {
+    "$date": {
+      "$numberLong": "1658036700000"
+    }
+  },
+  "CLASS": "outpatient",
+  "PROVIDER": {
+    "$oid": "62cd0ce286b0448a549eac09"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d53d2da0b30cb87d590b5c"
+  },
+  "START": {
+    "$date": {
+      "$numberLong": "1658205900000"
+    }
+  },
+  "END": {
+    "$date": {
+      "$numberLong": "1658206800000"
+    }
+  },
+  "CLASS": "outpatient",
+  "PROVIDER": {
+    "$oid": "62cd0ce286b0448a549eac09"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62d55786a0b30cb87d591d1b"
+  },
+  "START": {
+    "$date": {
+      "$numberLong": "1658637000000"
+    }
+  },
+  "END": {
+    "$date": {
+      "$numberLong": "1658637900000"
+    }
+  },
+  "CLASS": "outpatient",
+  "PROVIDER": {
+    "$oid": "62cd0ce286b0448a549eac09"
+  },
+  "__v": 0
+}]
