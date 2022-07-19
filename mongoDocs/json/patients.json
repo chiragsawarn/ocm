@@ -1,0 +1,73 @@
+[{
+  "_id": {
+    "$oid": "62ce599e6226505924864696"
+  },
+  "__v": 14,
+  "AGE": 31,
+  "ENCOUNTERS": [
+    {
+      "$oid": "62d3847e12b13d32bae936ee"
+    },
+    {
+      "$oid": "62d38c8a12b13d32bae93704"
+    },
+    {
+      "$oid": "62d38c9912b13d32bae9370b"
+    },
+    {
+      "$oid": "62d38e4c12b13d32bae9371b"
+    },
+    {
+      "$oid": "62d38e4e12b13d32bae93722"
+    },
+    {
+      "$oid": "62d38e5a12b13d32bae93729"
+    },
+    {
+      "$oid": "62d4d164b6b9633f48d00a37"
+    },
+    {
+      "$oid": "62d53d2da0b30cb87d590b5c"
+    },
+    {
+      "$oid": "62d55786a0b30cb87d591d1b"
+    }
+  ],
+  "INSURANCE": {
+    "$oid": "62ce47b7304c68019031ab3c"
+  },
+  "NAME": "Chirag Sawarn"
+},{
+  "_id": {
+    "$oid": "62ce59cd6226505924864698"
+  },
+  "__v": 0,
+  "AGE": 35,
+  "ENCOUNTERS": [],
+  "INSURANCE": {
+    "$oid": "62ce47b7304c68019031ab3d"
+  },
+  "NAME": "Modita Joshi"
+},{
+  "_id": {
+    "$oid": "62ce59da622650592486469a"
+  },
+  "__v": 0,
+  "AGE": 38,
+  "ENCOUNTERS": [],
+  "INSURANCE": {
+    "$oid": "62ce47b7304c68019031ab3d"
+  },
+  "NAME": "Rudransh Joshi"
+},{
+  "_id": {
+    "$oid": "62ce5a06622650592486469d"
+  },
+  "__v": 0,
+  "AGE": 28,
+  "ENCOUNTERS": [],
+  "INSURANCE": {
+    "$oid": "62ce47b7304c68019031ab3e"
+  },
+  "NAME": "Jemimah Vidal"
+}]

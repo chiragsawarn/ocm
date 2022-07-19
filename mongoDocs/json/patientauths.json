@@ -1,0 +1,41 @@
+[{
+  "_id": {
+    "$oid": "62ce626f62265059248646a7"
+  },
+  "__v": 0,
+  "password": "password",
+  "patient": {
+    "$oid": "62ce599e6226505924864696"
+  },
+  "userId": "chirag.sawarn"
+},{
+  "_id": {
+    "$oid": "62ce628862265059248646aa"
+  },
+  "userId": "modita.joshi",
+  "password": "password",
+  "patient": {
+    "$oid": "62ce59cd6226505924864698"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62ce629d62265059248646ad"
+  },
+  "userId": "rudransh.joshi",
+  "password": "password",
+  "patient": {
+    "$oid": "62ce59da622650592486469a"
+  },
+  "__v": 0
+},{
+  "_id": {
+    "$oid": "62ce62bb62265059248646b0"
+  },
+  "userId": "jemimah.vidal",
+  "password": "password",
+  "patient": {
+    "$oid": "62ce5a06622650592486469d"
+  },
+  "__v": 0
+}]

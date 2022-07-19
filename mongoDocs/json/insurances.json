@@ -1,0 +1,52 @@
+[{
+  "_id": {
+    "$oid": "62ce47b7304c68019031ab3c"
+  },
+  "COPAYMENT": 20,
+  "COVEREDMEMBERS": "MOM DAD SPOUSE",
+  "DEDUCTIBLE": 2000,
+  "INSURER": "United Health Group",
+  "MAXIMUM": 20000,
+  "NETWORK": {
+    "$oid": "62ce3a49774f30a55a7c6821"
+  },
+  "PCP": {
+    "$oid": "62cd0ce286b0448a549eac09"
+  },
+  "STATEOFGEOGRAPHICALVALIDITY": "MA",
+  "SUBSCRIBER": "Chirag Sawarn"
+},{
+  "_id": {
+    "$oid": "62ce47b7304c68019031ab3d"
+  },
+  "INSURER": "Anthem",
+  "SUBSCRIBER": "Rudransh Joshi",
+  "STATEOFGEOGRAPHICALVALIDITY": "MA",
+  "PCP": {
+    "$oid": "62cd0ce286b0448a549eac10"
+  },
+  "NETWORK": {
+    "$oid": "62ce3a49774f30a55a7c6821"
+  },
+  "COVEREDMEMBERS": "MOM DAD SPOUSE KIDS",
+  "MAXIMUM": 100000,
+  "DEDUCTIBLE": 10000,
+  "COPAYMENT": 100
+},{
+  "_id": {
+    "$oid": "62ce47b7304c68019031ab3e"
+  },
+  "INSURER": "CVS Health",
+  "SUBSCRIBER": "Jemimah Vidal",
+  "STATEOFGEOGRAPHICALVALIDITY": "MA",
+  "PCP": {
+    "$oid": "62cd0ce286b0448a549ead39"
+  },
+  "NETWORK": {
+    "$oid": "62cdf77b492375d373b49cee"
+  },
+  "COVEREDMEMBERS": "MOM SISTER",
+  "MAXIMUM": 40000,
+  "DEDUCTIBLE": 4000,
+  "COPAYMENT": 40
+}]

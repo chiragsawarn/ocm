@@ -7,7 +7,7 @@ const cors = require('cors');
 app.use(cors());
 
 // arg is string that is our db connection, pulled from .env
-mongoose.connect(process.env.DATABASE_URL, {useNewUrlParser: true})
+mongoose.connect(process.env.DATABASE_URL)
 const db = mongoose.connection
 db.on('error', (error) => console.log(error))
 db.once('open', () => console.log('Connected to Database'))
