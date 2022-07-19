@@ -12,7 +12,7 @@ import { ViewBookingsComponent } from './view-bookings.component';
   imports: [
     CommonModule,
     ViewBookingsRoutingModule,
-    RouterModule
+    RouterModule,
   ]
 })
 

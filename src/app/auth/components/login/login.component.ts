@@ -53,7 +53,7 @@ export class LoginComponent implements OnInit {
           localStorage.clear();
         }
         else{
-          alert(JSON.stringify(res['patient'],null,4));
+          // alert(JSON.stringify(res['patient'],null,4));
           localStorage.setItem('patientData',JSON.stringify(res['patient']));
           this.router.navigate(['/patient/booking/pcp']);
         }

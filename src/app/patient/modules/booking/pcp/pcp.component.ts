@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { ApiService } from 'src/app/services/api.service';
 import * as moment from 'moment';
 
@@ -51,9 +51,9 @@ export class PcpComponent implements OnInit {
         this.unavailableSlots.add(encounter.START);
       }
     });
-    const iterator1 = this.unavailableSlots.values();
-    console.log("Unavailable : ",iterator1.next().value);
-    console.log("Unavailable : ",iterator1.next().value);
+    // const iterator1 = this.unavailableSlots.values();
+    // console.log("Unavailable : ",iterator1.next().value);
+    // console.log("Unavailable : ",iterator1.next().value);
     // alert(JSON.stringify(this.unavailableSlots,null,4));
   }
   
@@ -80,7 +80,7 @@ export class PcpComponent implements OnInit {
     for(let i=0; i<7; ++i){
       const availableSlotsToday = new Array();
       while(today < todayAt18){
-        console.log(this.unavailableSlots.has(today), today);
+        // console.log(this.unavailableSlots.has(today), today);
         if(!this.unavailableSlots.has(today)){
 
           availableSlotsToday.push(today);
@@ -109,10 +109,10 @@ export class PcpComponent implements OnInit {
   }
 
   findEncounters = ()=>{
-    const providerId = this.patientData.INSURANCE.PCP._id;
-    this.providerData = this.patientData.INSURANCE.PCP;
+    this.providerData = this.patientData.INSURANCE.PCP
+    if(this.provider) this.providerData = this.provider;
     // alert(JSON.stringify(this.providerData,null,4));
-    this.api.pcp(providerId).subscribe((res)=>{
+    this.api.pcp(this.providerData._id).subscribe((res)=>{
       this.encounters = res;
       this.findAvailableSlots();
       // alert(JSON.stringify(this.availableSlots,null,4));
@@ -120,6 +120,8 @@ export class PcpComponent implements OnInit {
   }
 
   constructor(private api:ApiService) { }
+
+  @Input() provider;
   
   ngOnInit(): void {
     this.findEncounters();

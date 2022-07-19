@@ -8,10 +8,29 @@ import { ApiService } from 'src/app/services/api.service';
 })
 export class InNetworkComponent implements OnInit {
   allProvidersData:any = [];
+  choosenSpecialist = "GENERAL MEDICINE";
+  specialistData = {
+    'GENERAL MEDICINE':[],
+    'OPTOMETRY':[],
+    'PSYCHOLOGIST':[],
+    'CHIROPRACTIC':[],
+    'PEDIATRICS':[],
+  }
   specializations:any = new Set();
+
   constructor(private api:ApiService) { }
 
-  
+  onChoosenSpecialistChange(choosenSpecialist){
+    this.choosenSpecialist = choosenSpecialist;
+    console.log(this.choosenSpecialist);
+  }
+
+  populateSpecialistData(){
+    this.allProvidersData.forEach((provider)=>{
+      this.specialistData[provider.SPECIALITY].push(provider);
+    })
+    // alert(JSON.stringify(this.specialistData,null,4))
+  }
   
   findAllNetworkProviders(){
     
@@ -22,6 +41,7 @@ export class InNetworkComponent implements OnInit {
       this.allProvidersData.forEach(provider => {
         this.specializations.add(provider.SPECIALITY);
       }); 
+      this.populateSpecialistData();
       // alert(JSON.stringify(Array.from(this.specializations.values()),null,4))
     })
   }

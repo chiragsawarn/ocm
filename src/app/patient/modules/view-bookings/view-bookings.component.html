@@ -1,5 +1,5 @@
 <h1 class="text-center mt-3 mb-3"><span *ngIf="this.encounters.length == 0">No </span> Upcoming Appointments</h1>
-<section class="container col-md-6 mb-3" style="background-color: var(--black-1);" *ngFor="let encounter of this.encounters">
+<section class="container col-md-10 mb-3" style="background-color: var(--black-1);" *ngFor="let encounter of this.encounters">
     <div class="card" style="width: 100%; background-color: inherit; color:whitesmoke;">
         <div class="card-body">
             <h1 class="card-title"> Dr. {{encounter.PROVIDER.NAME}}</h1>

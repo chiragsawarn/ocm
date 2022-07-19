@@ -1,8 +1,8 @@
-<div class="container d-flex justify-content-center mt-5 mb-5">
+<div class="container d-flex justify-content-center mt-2 mb-2">
     <div class="col-md-4">
-        <select class="form-select" formControlName="specialization" name="specialization" id="specialization">
-            <option selected disabled value="" default >Specialization</option>
-            <option value="GENERAL MEDICINE" default >GENERAL MEDICINE</option>
+        <select class="form-select" (change)="onChoosenSpecialistChange(specialist.value)" #specialist name="specialization" id="specialization">
+            <option disabled value="" default >Specialization</option>
+            <option selected value="GENERAL MEDICINE" default >GENERAL MEDICINE</option>
             <option value="OPTOMETRY">OPTOMETRY</option>
             <option value="PSYCHOLOGIST">PSYCHOLOGIST</option>
             <option value="CHIROPRACTIC">CHIROPRACTIC</option>
@@ -13,3 +13,34 @@
         </div>
     </div>
 </div>
+<section class="container mb-2" *ngFor="let provider of specialistData[choosenSpecialist]">
+    <app-pcp [provider]="provider"></app-pcp>
+</section>
+<!-- <section class="container mb-2" *ngFor="let provider of specialistData[choosenSpecialist]" style="background-color: var(--black-1);">
+    <div class="card" style="width: 100%; background-color: inherit; color:whitesmoke;">
+        <div class="card-body">
+            <h1 class="card-title"> Dr. {{this.provider.NAME}}</h1>
+            <div class="d-flex">
+                <section class="card-text w-25">
+                    <h4 class="card-subtitle mb-2 text-muted">{{this.provider.SPECIALITY}}</h4>
+                    <p class="fw-bold">{{this.provider.ORGANIZATION.NAME | titlecase}}</p>
+                    <span>{{this.provider.ORGANIZATION.ADDRESS | titlecase}}</span><br>
+                    <span>{{this.provider.ORGANIZATION.CITY | titlecase}}</span><br>
+                    <span>{{this.provider.ORGANIZATION.STATE}}</span>
+                </section>
+                <section class="w-75">
+                    <div class="mb-2">
+                        <button class="btn btn-outline-dark" (click)="decrementCurrentDay()">{{" < "}}</button>
+                        <h4 class="card-subtitle mb-2 text-muted d-inline-block w-25 text-center"> {{ moment.utc(availableSlots[currentDay][0]).format('dddd, MMMM Do YYYY')}} </h4>
+                        <button class="btn btn-outline-dark" (click)="incrementCurrentDay()">{{" > "}}</button>
+                    </div>
+                    <span
+                        *ngFor="let slot of availableSlots[currentDay]"
+                        class="btn btn-outline-warning"
+                        (click)="book(slot)"
+                    >{{moment.utc(slot).add(330, 'm').format("HH:mm")}}</span>
+                </section>
+            </div>
+        </div>
+    </div>
+</section> -->

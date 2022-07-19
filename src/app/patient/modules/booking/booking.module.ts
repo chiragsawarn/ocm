@@ -6,6 +6,7 @@ import { PcpComponent } from './pcp/pcp.component';
 import { InNetworkComponent } from './in-network/in-network.component';
 import { RouterModule } from '@angular/router';
 import { BookingRoutingModule } from './booking-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { BookingRoutingModule } from './booking-routing.module';
   imports: [
     CommonModule,
     RouterModule,
-    BookingRoutingModule
+    BookingRoutingModule,
+    FormsModule
   ]
 })
 export class BookingModule { }
